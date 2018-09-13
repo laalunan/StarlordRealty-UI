@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+</head>
+<body>
+	<center>
+		<h1>Login here!</h1>
+	</center>
+	<br />
+	<br />
+	<center>
+		Username:<br /> <input type="text" id="username" size="35"><br />
+		Password:<br /> <input type="password" id="password" size="35"><br />
+		<br />
+		
+		<button type="submit" onclick="UserAction()">Login</button>
+			
+		<p id="status">
+		
+	</center>
+	
+<script>
+function UserAction() {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.open("POST", "http://localhost:8080/login", true);
+			xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	  xhttp.send(JSON.stringify({"username":document.getElementById("username").value, 
+				"password":document.getElementById("password").value
+				}));
+	  
+	  xhttp.onreadystatechange = function() {
+		  if (this.readyState == 4 && this.status == 200) {
+			  var name = this.responseText;
+			  var $nr = name;
+			  document.getElementById("status").innerHTML = ""
+			  document.getElementById("status").innerHTML+= $nr;
+			  
+			  if ($nr.localeCompare("Admin")==0) {
+					loginA();
+			  }
+			  
+			  else if($nr.localeCompare("Broker")==0 || $nr.localeCompare("SalesAgent")==0){
+				  loginBSA();
+			  }
+		  }
+	  };
+	   
+	  function loginA(){
+		localStorage.setItem("username",document.getElementById("username").value);
+		//console.log(document.getElementById("username").value);
+		window.location.href ="ViewAdmin.html";
+	 }
+	  
+	  function loginBSA(){
+		localStorage.setItem("username",document.getElementById("username").value);
+		window.location.href = "index2.html";
+	  }
+	  
+	}
+</script>
+</body>
+</html>

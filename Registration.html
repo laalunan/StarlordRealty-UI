@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+
+</head>
+<body>
+<center><h1>Register a new account!</h1> </center><br/><br/>
+<center>
+
+Username:<br/> <input type="text" id="username" size="35"><br/>
+Email:<br/><input type="text" id="email" size="35"><br/>
+Password:<br/><input type="password" id="password" size="35"><br/>
+First Name:<br/><input type="text" id="firstName" size="35"><br/>
+Last Name:<br/><input type="text" id="lastName" size="35"><br/>
+User Type:<br/>
+<select id ="userType">
+  <option value="Admin">Admin</option>
+  <option value="Broker">Broker</option>
+  <option value="SalesAgent">Sales Agent</option>
+</select>
+<br/><br/>
+Account Status:<br/>
+<select id ="accountStatus">
+  <option value="1">Active</option>
+  <option value="0">Suspended</option>
+</select>
+<br/><br/>
+<p id="status">
+
+<button type="submit" onclick="UserAction()">Register</button><br>
+ </center>
+ 
+ <script>
+function UserAction() {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.open("POST", "http://localhost:8080/register", true);
+			xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	  xhttp.send(JSON.stringify({"username":document.getElementById("username").value, 
+				"email":document.getElementById("email").value, 
+				"password":document.getElementById("password").value,
+				"firstName":document.getElementById("firstName").value,
+				"lastName":document.getElementById("lastName").value,
+				"userType":document.getElementById("userType").value,
+				"accountStatus":document.getElementById("accountStatus").value
+	  }));
+	}
+</script>
+</body>
+</html>

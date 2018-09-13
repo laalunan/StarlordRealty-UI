@@ -1,0 +1,122 @@
+table, tr, td {
+    border: 0px;
+    border-collapse: collapse;
+}
+
+.search-label {
+    height: 25px; 
+    padding: 5px;
+    background-color: darkblue;
+    color:lightgray; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: small; 
+    font-weight: bold; 
+    vertical-align: bottom;                
+}
+
+.main-menu-label {
+    text-align: right;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+}
+
+.extra-large-label {
+    padding: 15px;
+    background-color: #000000;
+    color:#FFFFFF;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large; 
+    font-weight: bold;
+}
+
+.search-inputs {
+    padding:5px; 
+    vertical-align: top; 
+    color: #FFFFFF; 
+    background-color:darkblue; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: small;
+}
+
+.medium-length {
+    width: 200px;
+    height: 25px;
+}
+
+.medium-small-length {
+    width: 170px;
+    height: 25px;
+}
+
+.small-button {
+    width: 80px;
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: small;
+}
+
+.medium-button {
+    width: 100px;
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: small;
+    text-align: center;
+}
+
+.logo-image {
+    border:0px;
+    height:65px;
+    width:130px;
+}
+
+.property-img-search-result {
+    border:0px;
+    height:190px;
+    width:215px;
+}
+
+.property-search-result-label1 {
+    padding: 3px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+
+.property-search-result-label2 {
+    padding: 3px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    background-color: yellow;
+}
+
+.property-search-result-label3 {
+    padding: 3px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.property-search-result-label4 {
+    padding: 3px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    font-style: italic;
+}
+
+.property-search-result-view-btn {
+    padding: 5px;
+    text-align: center;
+    background-color: darkblue;
+}
+
+.property-search-result-box {
+    background-color: lightskyblue;
+    border: 1px solid darkslateblue;
+}

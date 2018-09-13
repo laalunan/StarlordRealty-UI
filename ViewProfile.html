@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>View Profile</title>
+
+</head>
+<body>
+<h1>View Profile</h1>
+
+<button type="submit" onclick="update()">Update Profile</button><br/>
+<!-- <button type="submit" onclick="">Logout</button><br/> -->
+<button type="submit" onclick="changePass()">Change Password</button><br/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<div id="userProfile"></div>
+
+
+<script>
+$(document).ready(function(){
+	var obj, dbParam, xmlhttp, myObj, x, txt = "";
+	dbParam = JSON.stringify(obj);
+	xmlhttp = new XMLHttpRequest();
+	
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				var users = JSON.parse(this.responseText);
+				
+				console.log(users[0].lastName);
+				document.getElementById("userProfile").innerHTML += users[0].username;
+				document.getElementById("userProfile").innerHTML += "<br>";
+				document.getElementById("userProfile").innerHTML += users[0].firstName;
+				document.getElementById("userProfile").innerHTML += "<br>";
+				document.getElementById("userProfile").innerHTML += users[0].lastName;
+				document.getElementById("userProfile").innerHTML += "<br>";
+				document.getElementById("userProfile").innerHTML += users[0].email;
+				document.getElementById("userProfile").innerHTML += "<br>";
+				document.getElementById("userProfile").innerHTML += users[0].userType;
+
+		}
+	}; 
+	xmlhttp.open("POST", "http://localhost:8080/viewprofile", true);
+	xmlhttp.setRequestHeader("Content-type","application/json");
+	xmlhttp.send(JSON.stringify({"username":localStorage.getItem("username")}));
+	});
+	
+function update(){
+	localStorage.setItem("profile", localStorage.getItem("username"));
+	window.location.href ="UpdateProfile.html"
+}
+
+function changePass(){
+	localStorage.setItem("profilename", localStorage.getItem("username"));
+	window.location.href ="ChangePassword.html"
+}
+
+</script>
+
+</body>
+</html>

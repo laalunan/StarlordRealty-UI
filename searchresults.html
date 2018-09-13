@@ -1,0 +1,245 @@
+<html>
+    <head>
+        <title>www.starlordrealty.com</title>
+        <link rel="stylesheet" type="text/css" href="starlordrealty.css">
+    </head>
+    <body>
+        <form>
+            <table style="width:100%;background-color:#FFFFFF;border: 1px solid #000000">
+                <tr>
+                    <td style="text-align: left;color: #FFFFFF;background-color: darkblue;font-family:Arial, Helvetica, sans-serif;font-size: small;padding: 8px;">
+                        &nbsp;&nbsp;StarLordRealty.com
+                    </td>
+                    <td style="text-align: right;color: #FFFFFF;background-color: darkblue;padding: 5px;font-family:Arial, Helvetica, sans-serif;font-size: small">
+                            Welcome,&nbsp;&nbsp;
+                            <span style="color:yellow">jaydominic@gmail.com</span>
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a href="#" style="color:gold"><b>My Profile</b></a>
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a href="#" style="color:gold"><b>Sign-Out</b></a>
+                            &nbsp;&nbsp;
+                        </td>
+                    </tr>
+                <tr>
+                    <td style="padding:5px">
+                        <img src="images/starlord_realty_logo.png" class="logo-image">
+                    </td>
+                    <td class="main-menu-label">
+                        <a href="#">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" width="100%">
+
+                        <!-- BEGIN: Search Bar goes here -->
+
+                        <table style="height:65px; width:100%">
+                            <tr>
+                                <td class="search-label" width="15%">Type</td>
+                                <td class="search-label" width="15%">Classification</td>
+                                <td class="search-label" width="70%">Location / City</td>
+                            </tr>
+
+                            <tr>
+                                <td class="search-inputs">
+
+                                    <select name="property_type" id="property_type" class="medium-small-length">
+                                        <option value="ALL" selected>&lt;All Types&gt;</option>
+                                        <option value="">Apartment</option>
+                                        <option value="">Commercial</option>
+                                        <option value="">Condominium</option>
+                                        <option value="">House and Lot</option>
+                                        <option value="">Industrial</option>
+                                        <option value="">Land and Farm</option>
+                                        <option value="">Lot</option>
+                                        <option value="">Townhouse</option>
+                                    </select>
+
+                                </td>
+                                <td class="search-inputs">
+
+                                    <select name="property_class" id="property_class" class="medium-small-length">
+                                        <option value="ALL" selected>&lt;For Sale/Rent/Lease&gt;</option>
+                                        <option value="FORSALE">For Sale</option>
+                                        <option value="FORRENT">For Rent/Lease</option>
+                                    </select>
+
+                                </td>
+                                <td class="search-inputs">
+
+                                    <input type="text" name="property_loc" id="property_loc" class="medium-length">
+                                    &nbsp;
+                                    <input type="button" value="Search" name="btn_search" id="btn_search" class="small-button">
+
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- END: Search Bar goes here -->
+
+                    </td>
+
+                </tr>
+
+                <!-- BEGIN: Search Results should be displayed here -->
+
+                <!-- NOTE: Use the row below as template when displaying each record from the search results -->
+                <tr>
+                    <td colspan="2">
+
+                        <table>
+
+                            <!-- NOTE: LOOP STARTS HERE -->
+
+                            <!-- BEGIN: Each row can display up to 4 properties -->
+                            <tr>
+                                <!-- BEGIN: property #1 -->
+                                <td>
+                                    <table class="property-search-result-box">
+                                        <tr>
+                                            <td class="property-search-result-label4">Compare this <input type="checkbox" name="prop-chk-0" id="prop-chk-0"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="images/image_placeholder.png" class="property-img-search-result">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label2"><b>For Sale</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label1">Condominium</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label3"><b>PHP 999,999,999.00</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label1">Quezon City</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-view-btn"><input type="button" value="View Details" class="medium-button"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <!-- END: property #1 -->
+
+                                <!-- BEGIN: Filler space -->
+                                <td>&nbsp;&nbsp;&nbsp;</td>
+                                <!-- END: Filler space -->
+
+                                <!-- BEGIN: property #2 -->
+                                <td>
+                                    <table class="property-search-result-box">
+                                        <tr>
+                                            <td class="property-search-result-label4">Compare this <input type="checkbox" name="prop-chk-1" id="prop-chk-1"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="images/image_placeholder.png" class="property-img-search-result">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label2"><b>For Sale</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label1">Condominium</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label3"><b>PHP 999,999,999.00</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label1">Quezon City</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-view-btn"><input type="button" value="View Details" class="medium-button"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <!-- END: property #2 -->
+    
+                                <!-- BEGIN: Filler space -->
+                                <td>&nbsp;&nbsp;&nbsp;</td>
+                                <!-- END: Filler space -->
+
+                                <!-- BEGIN: property #3 -->
+                                <td>
+                                    <table class="property-search-result-box">
+                                        <tr>
+                                            <td class="property-search-result-label4">Compare this <input type="checkbox" name="prop-chk-2" id="prop-chk-2"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="images/image_placeholder.png" class="property-img-search-result">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label2"><b>For Sale</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label1">Condominium</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label3"><b>PHP 999,999,999.00</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label1">Quezon City</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-view-btn"><input type="button" value="View Details" class="medium-button"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <!-- END: property #3 -->
+    
+                                <!-- BEGIN: Filler space -->
+                                <td>&nbsp;&nbsp;&nbsp;</td>
+                                <!-- END: Filler space -->
+
+                                <!-- BEGIN: property #4 -->
+                                <td>
+                                    <table class="property-search-result-box">
+                                        <tr>
+                                            <td class="property-search-result-label4">Compare this <input type="checkbox" name="prop-chk-3" id="prop-chk-3"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="images/image_placeholder.png" class="property-img-search-result">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label2"><b>For Sale</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label1">Condominium</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label3"><b>PHP 999,999,999.00</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-label1">Quezon City</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="property-search-result-view-btn"><input type="button" value="View Details" class="medium-button"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <!-- END: property #4 -->
+    
+                            </tr>
+                            <!-- END: Each row can display up to 4 properties -->
+
+                            <!-- NOTE: LOOP ENDS HERE -->
+
+                        </table>
+
+                    </td>
+                </tr>
+
+                <!-- END: Search Results should be displayed here -->
+
+            </table>
+        </form>
+    </body>
+</html>

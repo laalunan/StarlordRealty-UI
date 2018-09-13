@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Profile </title>
+
+</head>
+<body>
+<h1>Update Profile</h1>
+
+First Name:<br/><input type="text" id="firstName" size="35"><br/>
+Last Name:<br/><input type="text" id="lastName" size="35"><br/>
+Email:<br/><input type="text" id="email" size="35"><br/>
+
+
+<button type="submit" onclick="update()">Update Profile</button><br/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<div id="userProfile"></div>
+
+<script>
+function update(){
+	$(document).ready(function(){
+		var obj, dbParam, xmlhttp, myObj, x, txt = "";
+		dbParam = JSON.stringify(obj);
+		xmlhttp = new XMLHttpRequest();
+		
+		xmlhttp.open("POST", "http://localhost:8080/updateprofile", true);
+		xmlhttp.setRequestHeader("Content-type","application/json");
+		xmlhttp.send(JSON.stringify({"username":localStorage.getItem("profile"), 
+										"email":document.getElementById("email").value,
+									"firstName":document.getElementById("firstName").value,
+									 "lastName":document.getElementById("lastName").value
+		}));
+		})	;
+}
+</script>
+
+</body>
+</html>
